@@ -1,0 +1,58 @@
+p{
+    font-size: larger;
+    font-weight: bolder;
+    opacity: 1;
+}
+.about {
+    width: 100vw;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .scrolling-content {
+    white-space: nowrap;
+    animation: scrollRightToLeft 30s linear infinite;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #ccc;
+  }
+  
+  @keyframes scrollRightToLeft {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .scrolling-content p {
+    margin: 0;
+  }
+  
+  .scrolling-content span {
+    display: block;
+  }
+  
+  .centered-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 1s;
+    cursor: pointer; /* Change cursor on hover */
+  }
+  
+  .about.hover .centered-content {
+    opacity: 1;
+  }
+  
+  .centered-content:hover {
+    opacity: 1;
+  }
+  
+  .about.hover .scrolling-content {
+    animation-play-state: paused; /* Pause the scrolling animation */
+  }
+  

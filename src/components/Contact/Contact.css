@@ -1,0 +1,7 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('/public/back.jpg') fixed center;
+    background-size: cover;
+    opacity: 0.8; /* Adjust the opacity value as needed */
+  }
