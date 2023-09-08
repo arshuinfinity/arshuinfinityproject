@@ -165,17 +165,17 @@ function Contact() {
                     santhiya nagar agara road,  
                     chennai - 600126.<br/>
           </p><br/>
-          <MDBBtn className='m-1' style={{ backgroundColor: '#3b5998' }} href='#'>
+          <MDBBtn className='m-1' style={{ backgroundColor: '#3b5998' }}target='_blank' rel='noopener noreferrer' href='https://www.facebook.com/profile.php?id=61550302123628&mibextid=ZbWKwL'>
         <MDBIcon fab icon='facebook-f' />
       </MDBBtn> &nbsp;
-      <MDBBtn className='m-1' style={{ backgroundColor: '#dd4b39' }} href='#'>
+      <MDBBtn className='m-1' style={{ backgroundColor: '#dd4b39' }}target='_blank' rel='noopener noreferrer' href='https://mail.google.com/mail/u/0/#inbox'>
         <MDBIcon fab icon='google' />
       </MDBBtn>&nbsp;
 
-      <MDBBtn className='m-1' style={{ backgroundColor: '#ac2bac' }} href='#'>
+      <MDBBtn className='m-1' style={{ backgroundColor: '#ac2bac' }}target='_blank' rel='noopener noreferrer' href='https://instagram.com/arshu_infinity_official?igshid=ZGUzMzM3NWJiOQ=='>
         <MDBIcon fab icon='instagram' />
       </MDBBtn>&nbsp;
-      <MDBBtn className='m-1' style={{ backgroundColor: '#25d366' }} href='#'>
+      <MDBBtn className='m-1' style={{ backgroundColor: '#25d366' }} href='https://wa.me/qr/XE2ATOAZVAU2E1'>
         <MDBIcon fab icon='whatsapp' />
       </MDBBtn>
         </section>

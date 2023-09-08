@@ -1,4 +1,11 @@
+import QRCode from 'qrcode.react';
 function Home() {
-  return <h6>QR code should provide</h6>;
+  return (
+    <div>
+      <h1>QR Code Generator</h1>
+      <QRCode value='https://arshuinfinity.com' />
+    </div>
+  );
+
 }
 export default Home;

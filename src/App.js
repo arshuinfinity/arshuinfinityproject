@@ -25,7 +25,7 @@ function App() {
               className="d-inline-block align-top"
             />&nbsp;ArShu Infinity</Navbar.Brand>
           <Nav className="ms-auto">
-            <Nav.Link className="navcolor mx-3" href="/home">Home</Nav.Link>
+            <Nav.Link className="navcolor mx-3" href="/">Home</Nav.Link>
             <Nav.Link className="navcolor mx-3" href="/about">About</Nav.Link>
             <Nav.Link className="navcolor mx-3" href="/contact">Contact</Nav.Link>
           </Nav>
@@ -35,7 +35,7 @@ function App() {
 <Element name="about"><About/></Element>
   <Element name="contact"><Contact/></Element>*/}
       <Routes>
-        <Route path="/home" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<NotFound />} />
