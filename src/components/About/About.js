@@ -1,31 +1,5 @@
 import "./About.css";
-document.addEventListener('DOMContentLoaded', () => {
-  const aboutElement = document.querySelector('.about');
 
-  // Create a new element to hold the centered content
-  const centeredContentElement = document.createElement('div');
-  centeredContentElement.className = 'centered-content';
-  centeredContentElement.innerHTML = `
-    <p>
-      ARSHU INFINITY Private limited is a Private incorporated on 4 March 2023.
-      <!-- Rest of your content here -->
-    </p>
-    <span>Director: Arshiya Ambrin</span>
-    <span>Company: ARSHU INFINITY Private Limited</span>
-    <span>URN: udyam-tn-08-0058331</span>
-  `;
-
-  centeredContentElement.addEventListener('mouseover', () => {
-    aboutElement.classList.add('hover');
-  });
-
-  centeredContentElement.addEventListener('mouseout', () => {
-    aboutElement.classList.remove('hover');
-  });
-
-  // Append the centered content element to the "about" element
-  aboutElement.appendChild(centeredContentElement);
-});
 
 function About() {
   return (
@@ -33,6 +7,7 @@ function About() {
     <div className="about">
      
       <div className="scrolling-content">
+      
 
     <p>
       ARSHU INFINITY Private limited is a Private incorporated on 4 March
@@ -45,11 +20,48 @@ function About() {
     <span>Director: Arshiya Ambrin</span><br/>
     <span>Company: ARSHU INFINITY Private Limited</span><br/>
     <span>URN : udyam-tn-08-0058331</span><br/>
+    
     </div>
     </div>
    
   );
 
 }
+document.addEventListener('DOMContentLoaded', () => {
+  const aboutDiv = document.querySelector('.about');
+  const scrollingContent = document.querySelector('.scrolling-content');
+
+  let isCursorOverAbout = false;
+
+  // Function to stop scrolling
+  function stopScrolling() {
+    scrollingContent.style.overflow = 'hidden';
+  }
+
+  // Function to resume scrolling
+  function resumeScrolling() {
+    scrollingContent.style.overflow = 'auto';
+  }
+
+  // Add mouseenter event listener to the "about" div
+  aboutDiv.addEventListener('mouseenter', () => {
+    isCursorOverAbout = true;
+    stopScrolling();
+  });
+
+  // Add mouseleave event listener to the "about" div
+  aboutDiv.addEventListener('mouseleave', () => {
+    isCursorOverAbout = false;
+    resumeScrolling();
+  });
+
+  // Add click event listener to the document to capture any clicks outside the "about" div
+  document.addEventListener('click', (event) => {
+    if (!isCursorOverAbout) {
+      resumeScrolling();
+    }
+  });
+});
+
 
 export default About;

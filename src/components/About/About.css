@@ -8,7 +8,9 @@ p{
     overflow: hidden;
     position: relative;
   }
-  
+  .about.hover {
+    overflow: hidden;
+}
   .scrolling-content {
     white-space: nowrap;
     animation: scrollRightToLeft 30s linear infinite;
