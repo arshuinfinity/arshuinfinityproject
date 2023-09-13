@@ -3,14 +3,17 @@ p{
     font-weight: bolder;
     opacity: 1;
 }
+span{
+  font-weight: bolder;
+  opacity: 1;
+}
+
 .about {
     width: 100vw;
     overflow: hidden;
     position: relative;
   }
-  .about.hover {
-    overflow: hidden;
-}
+
   .scrolling-content {
     white-space: nowrap;
     animation: scrollRightToLeft 30s linear infinite;

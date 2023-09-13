@@ -3,37 +3,35 @@ import "./About.css";
 document.addEventListener('DOMContentLoaded', () => {
   const aboutDiv = document.querySelector('.about');
   const scrollingContent = document.querySelector('.scrolling-content');
+  let animationPaused = false;
 
-  let isCursorOverAbout = false;
-
-  // Function to stop scrolling
-  function stopScrolling() {
-    scrollingContent.style.overflow = 'hidden';
+  // Function to pause the scrolling animation
+  function pauseScrollingAnimation() {
+    scrollingContent.style.animation = 'none';
   }
 
-  // Function to resume scrolling
-  function resumeScrolling() {
-    scrollingContent.style.overflow = 'auto';
+  // Function to resume the scrolling animation
+  function resumeScrollingAnimation() {
+    scrollingContent.style.animation = 'scrollRightToLeft 40s linear infinite';
   }
 
   // Add mouseenter event listener to the "about" div
   aboutDiv.addEventListener('mouseenter', () => {
-    isCursorOverAbout = true;
-    stopScrolling();
+    console.log('Mouse entered "about" div');
+    animationPaused = true;
+    pauseScrollingAnimation();
   });
 
   // Add mouseleave event listener to the "about" div
   aboutDiv.addEventListener('mouseleave', () => {
-    isCursorOverAbout = false;
-    resumeScrolling();
-  });
-
-  // Add click event listener to the document to capture any clicks outside the "about" div
-  document.addEventListener('click', (event) => {
-    if (!isCursorOverAbout) {
-      resumeScrolling();
+    console.log('Mouse left "about" div');
+    animationPaused = false;
+    if (!animationPaused) {
+      resumeScrollingAnimation();
     }
   });
+
+
 });
 
 function About() {
@@ -53,7 +51,7 @@ function About() {
       month by creating videos and completing five levels
     </p>
     <span>Director: Arshiya Ambrin</span><br/>
-    <span>Company: ARSHU INFINITY Private Limited</span><br/>
+    <span>Company: ARSHU INFINITY Private Limited</span>
     <span>URN : udyam-tn-08-0058331</span><br/>
     
     </div>
